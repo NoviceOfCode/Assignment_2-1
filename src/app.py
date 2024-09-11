@@ -144,9 +144,19 @@ def predict_posture(features):
 # In[9]:
 
 
+# Find the target that is closest to the value
+targets = [0, 1, 2]
+
 if st.button('Predict'):
     result = predict_posture(input_data)
-    st.write(f"The predicted posture is: {result}")
+    closest_target = min(targets, key=lambda x: abs(result[0][0] - x))
+    if closest_target == 0:
+        st.write(f"The predicted posture is: Correct\n | Prediction Value: {result[0][0]}")
+    elif closest_target == 1:
+        st.write(f"The predicted posture is: Too High \n |  Prediction Value: {result[0][0]}")
+    elif closest_target == 2:
+        st.write(f"The predicted posture is: Too Low \n  | Prediction Value: {result[0][0]}")
+
 
 
 # In[ ]:
