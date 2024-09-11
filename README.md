@@ -11,6 +11,6 @@ The dataset is plank exercises done for a thesis project from the https://github
 The model created is a model that has 0.9912342429161072 accuracy for detecting correct plank vs improper back placement plank. 
 
 # Instructions
-**Training Model** - As long as you have all the libraries needed, you should only need to run "Model Training.ipynb" in the src folder.That should automatically produce the necessary model
+**Training Model** - As long as you have all the libraries needed, you should only need to run "Model Training.ipynb" in the src folder.That should automatically produce the necessary model. Open Model Training in Jupyter and hit **run all cells**.
 
 **Use Model** - For this, imports can be trickier. We have the model able to be deployed through Streamlit. Your tensorflow library and potsobuff library on python will may need to have their versions adjusted. In a terminal, in the src directory, type _streamlit run app.py_. This command should give you a link to local host to show you a model that allows you to input values that correspond with the position of body parts. Once you place all wanted values, the model will give you a prediction.
